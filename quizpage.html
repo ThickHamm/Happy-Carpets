@@ -41,6 +41,8 @@
       border-radius: 25px;     
       cursor: pointer;
 
+      background-color: darkgrey;
+
       color: white;
       font-weight: bold;
 
@@ -97,6 +99,7 @@
   <h1>Question 1</h1>
   <p style="font-size: 70px">How depressed are you rn?</p>
   <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+<<<<<<< HEAD
     <button style="background-color:pink;" type="button" onclick="score += 1; myFunction();">Click Me 1</button>
     <button style="background-color:lightblue;"type="button" onclick="score += 2; myFunction()">Click Me 2</button>
   </div>
@@ -104,6 +107,15 @@
   <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
     <button style="background-color:rgb(215, 136, 194);"type="button" onclick="score += 3; myFunction()">Click Me 3</button>
     <button style="background-color:rgb(132, 153, 246);"type="button" onclick="score += 4; myFunction()">Click Me 4</button>
+=======
+    <button id = "button1" type="button" onclick="score += 1; myFunction(id);">Click Me 1</button>
+    <button id = "button2" type="button" onclick="score += 2; myFunction(id)">Click Me 2</button>
+  </div>
+    
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+    <button id = "button3" type="button" onclick="score += 3; myFunction(id)">Click Me 3</button>
+    <button id = "button4" type="button" onclick="score += 4; myFunction(id)">Click Me 4</button>
+>>>>>>> 824db38620a322c81a4d8a60f64f798dca4afb1c
   </div>
   <button style = "background-color: rgb(73, 180, 185);"
     onclick ="showPage('question2')">Next</button>
@@ -222,10 +234,14 @@
 
 <script>
   let score = 0;
-  function myFunction() 
+  let answers = ["button1"];
+  function myFunction(id) 
   {
-  alert('The button was clicked!');
-  }
+  document.getElementById(`${answers[0]}`).style.backgroundColor = "darkgrey";
+  answers[0] = id;
+  document.getElementById(`${id}`).style.backgroundColor = "green";
+  //alert('The button was clicked!');
+  } 
 </script>
 
 </body>
