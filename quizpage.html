@@ -227,8 +227,18 @@
   let answers = ["1"];
   function myFunction(id) 
   {
-  document.getElementById(`${answers[0]}`).style.backgroundColor = "darkgrey";
+  if(answers[0]%4==0)
+  { document.getElementById(`${answers[0]}`).style.backgroundColor = "pink";}
+  else if(answers[0]%4==1)
+  { document.getElementById(`${answers[0]}`).style.backgroundColor = "lightblue";}
+  else if(answers[0]%4==2)
+  { document.getElementById(`${answers[0]}`).style.backgroundColor = "rgb(215, 136, 194)";}
+  else
+  { document.getElementById(`${answers[0]}`).style.backgroundColor = "rgb(132, 153, 246)";}
+
   answers[0] = id;
+  if(id%4==0)
+  {}
   document.getElementById(`${id}`).style.backgroundColor = "green";
   //alert('The button was clicked!');
   } 
