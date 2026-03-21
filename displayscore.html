@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Carpets</title>
+</head>
+<body>
+    <h1>Happy Carpets</h1>
+    <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: green;">Click the following button to see your score!.</p>
+    
+    <button type="button" onclick="myFunction()">Click Me</button>
+
+    <script>
+        function myFunction() 
+        {
+        const params = new URLSearchParams(window.location.search);
+        const score = params.get('score');
+        alert(`The button was clicked! Your score is ${score}`);
+        //console.log(`The button was clicked! Your score is ${score}`)
+        }
+    </script>
+</body>
+</html>
+
+
+
