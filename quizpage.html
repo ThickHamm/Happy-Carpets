@@ -2,46 +2,42 @@
 <html>
 <head>
 <style>
-  /* Hide all pages by default */
-  .page { display: none; }
-  /* Only show the page with the 'active' class */
-  .active { display: block; }
+  .page {
+  display: none;  /* hide all pages by default */
+  }
+
+.page.active {
+  display: flex;             /* show page as flex */
+  flex-direction: column;    /* stack content */
+  align-items: center;       /* center horizontally */
+  justify-content: center;   /* center vertically */
+  height: 100vh;
+  gap: 20px;
+  }
  
   button {
-  color: black;
-  width: 600px;
-  height: 300px;
-  font-size: 50px;
-  border-radius: 40 px;
-  gap: 100px;
-  box-align: center;
-                }
+      width: 350px;
+      padding: 20px;
+      font-size: 24px;
+      border: none;
+      border-radius: 25px;       /* rounded corners */
+      cursor: pointer;
+
+      color: white;
+      font-weight: bold;
+
+      transition: all 0.2s ease; /* smooth hover effect */
+  }
+  
   h1 {
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
   }
            
 </style>
 </head>
 <body>
-  <!-- Page 1 -->
-  <div id="home" class="page active">
-    <h1>Welcome Home</h1>
-    <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('about')">Go to About</button>
-    <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('quizinfo')">Go to Quiz</button>
-  </div>
-
-  <!-- Page 2 -->
-  <div id="about" class="page">
-    <h1>About Us</h1>
-    <p>This content is in the same file!</p>
-    <img src="smiling-cat-for-web.jpg" alt="">
-    <button onclick="showPage('home')">Back Home</button>
-  </div>
-
-<script>
+  <script>
   function showPage(pageId) {
     // 1. Find all elements with the class 'page' and hide them
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -49,29 +45,53 @@
     document.getElementById(pageId).classList.add('active');
   }
 </script>
+  <!-- Page 1 -->
+  <div id="home" class="page active">
+    <h1>Welcome Home</h1>
+    <button style = "background-color: rgb(206, 97, 97);"
+      onclick="showPage('about')">Go to About</button>
+    <button style = "background-color: rgb(73, 180, 185);"
+      onclick="showPage('quizinfo')">Go to Quiz</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="about" class="page">
+    <h1>About Us</h1>
+    <p>This content is in the same file!</p>
+    <img src="smiling-cat-for-web.jpg" alt="">
+    <button style = "background-color: rgb(73, 180, 185);"
+      onclick="showPage('home')">Back Home</button>
+  </div>
+
 <!-- Page 3 -->
 <div id="quizinfo" class="page">
   <h1>Welcome to the Quiz!</h1>
   <p>(Quiz info)</p>
   <p>Click the button below to start the quiz:</p>
-  <button onclick="showPage('question1')">Start Quiz!</button>
-  <button onclick="showPage('home')">Back Home</button>
+  <button style = "background-color: rgb(71, 175, 83);"
+    onclick="showPage('question1')">Start Quiz!</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
 </div>
 
 <!-- Page 4 -->
 <div id="question1" class="page">
   <h1>Question 1</h1>
   <p>(Question 1 content)</p>
-  <button onclick ="showPage('question2')">Next</button>
-  <button onclick="showPage('home')">Back Home</button>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick ="showPage('question2')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
 </div>
 
 <!-- Page 5 -->
 <div id="question2" class="page">
   <h1>Question 2</h1>
   <p>(Question 2 content)</p>
-  <button onclick="showPage('question3')">Next</button>
-  <button onclick="showPage('home')">Back Home</button>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('question3')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
  
 </div>
 
@@ -79,23 +99,28 @@
 <div id="question3" class="page">
   <h1>Question 3</h1>
   <p>(Question 3 content)</p>
-  <button onclick="showPage('question4')">Next</button>
-  <button onclick="showPage('home')">Back Home</button>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('question4')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
 </div>
 
 <!-- Page 7 -->
 <div id="question4" class="page">
   <h1>Question 4</h1>
   <p>(Question 4 content)</p>
-  <button onclick="showPage('question5')">Next</button>
-  <button onclick="showPage('home')">Back Home</button>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('question5')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
 </div>
 
 <!-- Page 8 -->
 <div id="question5" class="page">
   <h1>Question 5</h1>
   <p>(Question 5 content)</p>
-  <button onclick="showPage('home')">Back Home</button>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('home')">Back Home</button>
 </div>
 
 </body>
