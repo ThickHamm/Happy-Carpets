@@ -16,13 +16,27 @@
 
 
     <script>
-        let score = 0;
-        //alert('Site is loaded');
+        const params = new URLSearchParams(window.location.search);
+        let score = Number(params.get('score') ?? 0);
+        alert(`Success! Your score is ${score}`);
         function myFunction() 
         {
-        alert('The button was clicked!');
         window.location.href = `displayscore.html?score=${score}`
+        //console.log(`The button was clicked! Your score is ${score}`)
         }
+        if (score >= 0 && score <= 10) {
+           alert();
+        }
+        else if (score >= 11 && score <= 20){
+            alert();
+        }
+        else if(score >= 21 && score <= 30){
+            alert();
+        }
+        else {
+            alert();
+        }
+       
     </script>
 </body>
 </html>
