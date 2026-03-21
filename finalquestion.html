@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Carpets</title>
+</head>
+<body>
+    <h1 style="">FINAL QUESTION!!!</h1>
+    <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: green;">Click the following button for a surprise!.</p>
+    
+    <button type="button" onclick="score += 1; myFunction()">Click Me 1</button>
+    <button type="button" onclick="score += 2; myFunction()">Click Me 2</button>
+    <button type="button" onclick="score += 3; myFunction()">Click Me 3</button>
+    <button type="button" onclick="score += 4; myFunction()">Click Me 4</button>
+
+
+    <script>
+        let score = 0;
+        //alert('Site is loaded');
+        function myFunction() 
+        {
+        alert('The button was clicked!');
+        window.location.href = `displayscore.html?score=${score}`
+        }
+    </script>
+</body>
+</html>
