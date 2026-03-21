@@ -1,5 +1,35 @@
-<a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJpyQq5LhLqJkM4iSdsvBt-WWe3WBZbRK6AA&s">
-        <button style="font-size: larger;  ";
-            BUY NOW!!!
-        </button>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Hide all pages by default */
+  .page { display: none; }
+  /* Only show the page with the 'active' class */
+  .active { display: block; }
+</style>
+</head>
+<body>
 
+  <!-- Page 1 -->
+  <div id="home" class="page active">
+    <h1>Welcome Home</h1>
+    <button onclick="showPage('about')">Go to About</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="about" class="page">
+    <h1>About Us</h1>
+    <p>This content is in the same file!</p>
+    <img src="smiling-cat-for-web.jpg" alt="">
+    <button onclick="showPage('home')">Back Home</button>
+  </div>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
