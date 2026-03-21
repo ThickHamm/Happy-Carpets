@@ -296,12 +296,21 @@
     <button button id = "40" style="background-color:rgb(132, 153, 246);"type="button" onclick="; myFunction(id)">I feel very excited and confident</button>
   </div>
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('question10'); alert('finish');checkResults();">Finish</button>
+    onclick="showPage('results'); alert('finish');checkResults();">Finish</button>
   <button style = "background-color: rgb(91, 183, 95);"
     onclick="showPage('question9'); index--;">Back</button>
   <button style = "background-color: rgb(206, 97, 97);"
     onclick="showPage('home'); index = 0;">Back Home</button>
 </div>
+
+<div id="results" class="page">
+  <h1>Your Results</h1>
+  <h2>Your score is: <span id="sum"></span></h2>
+  <h2> YOU HELLA GEEKED TWIN</h2>
+  <img src="happy kitty.jpg" alt=" results image" style="width: 300px; height: 300px;">
+  <img src="970.jpeg" alt=" results image" style="width: 300px; height: 300px; left: 300px;">
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('home'); index = 0;">Back Home</button>
 
 <script>
   let score = 0;
@@ -347,7 +356,7 @@ if (index == 2){
     var audio = new Audio('Roblox Main Menu Theme Song  Xbox One.mp3');
     audio.play();
   }
-  function checkResults()
+    function checkResults()
   {
     
     let sum = 0;
@@ -357,7 +366,26 @@ if (index == 2){
     }
     alert(`Your score is ${sum}`);
     
-  
+    if(sum<=15)
+    {
+        showPage("about");
+    }
+    else if (sum<=21)
+    {
+        showPage("about");
+    }
+    else if (sum<=28)
+    {
+        showPage("about");
+    }
+    else if (sum<=34)
+    {
+        showPage("about");
+    }
+    else
+    {
+        showPage("about");
+    }
   }
 </script>
 
