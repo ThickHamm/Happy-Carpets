@@ -9,33 +9,27 @@
     <h1>Happy Carpets</h1>
     <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: green;">Click the following button for a surprise!.</p>
     
-    <button type="button" onclick="score += 1; myFunction()">Click Me 1</button>
-    <button type="button" onclick="score += 2; myFunction()">Click Me 2</button>
-    <button type="button" onclick="score += 3; myFunction()">Click Me 3</button>
-    <button type="button" onclick="score += 4; myFunction()">Click Me 4</button>
-
 
     <script>
         const params = new URLSearchParams(window.location.search);
         let score = Number(params.get('score') ?? 0);
         alert(`Success! Your score is ${score}`);
-        function myFunction() 
-        {
-        window.location.href = `displayscore.html?score=${score}`
-        //console.log(`The button was clicked! Your score is ${score}`)
-        }
+
         if (score >= 0 && score <= 10) {
            const win = window.open("", "Image", "width= 300,height=300");
            win.document.write("<img src='https://images.ctfassets.net/2djrn56blv6r/7rAzwZd1uxcIsKO7ZfJqVL/686320c46e6ff8d63191f3a8eb33de1f/sad-cat-header.jpg?fm=webp&q=75&w=1920' style='width:100%'>");
         }
         else if (score >= 11 && score <= 20){
-            alert();
+            const win = window.open("", "Image", "width= 300,height=300");
+           win.document.write("<img src='https://www.operationkindness.org/wp-content/uploads/blog-kitten-nursery-operation-kindness.jpg' style='width:100%'>");
         }
         else if(score >= 21 && score <= 30){
-            alert();
+            const win = window.open("", "Image", "width= 300,height=300");
+           win.document.write("<img src='https://images.ctfassets.net/sfnkq8lmu5d7/1NaIFGyBn0qwXYlNaCJSEl/ad59ce5eefa3c2322b696778185cc749/2021_0825_Kitten_Health.jpg' style='width:100%'>");
         }
         else {
-            alert();
+            const win = window.open("", "Image", "width= 300,height=300");
+           win.document.write("<img src='https://www.ccvhankeny.com/site/blog/2022/05/30/guide-to-kitten-care' style='width:100%'>");
         }
        
     </script>
