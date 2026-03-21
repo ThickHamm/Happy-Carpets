@@ -295,6 +295,8 @@
     <button button id = "39" style="background-color:rgb(215, 136, 194);"type="button" onclick="; myFunction(id)">I feel somewhat hopeful</button>
     <button button id = "40" style="background-color:rgb(132, 153, 246);"type="button" onclick="; myFunction(id)">I feel very excited and confident</button>
   </div>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('question10'); alert('finish');checkResults();">Finish</button>
   <button style = "background-color: rgb(91, 183, 95);"
     onclick="showPage('question9'); index--;">Back</button>
   <button style = "background-color: rgb(206, 97, 97);"
@@ -329,12 +331,24 @@
   if(id%4==0)
   {}
   document.getElementById(`${id}`).style.backgroundColor = "green";
-  alert(`Your score is ${(answers[index]-1)%4+1}`);
+  //alert(`Your score is ${(answers[index]-1)%4+1}`);
   } 
 
    function playMusic() {
     var audio = new Audio('Roblox Main Menu Theme Song  Xbox One.mp3');
     audio.play();
+  }
+  function checkResults()
+  {
+    
+    let sum = 0;
+    for (let i = 0; i<10; i++)
+    {
+      sum += (answers[i]-1)%4 + 1;
+    }
+    alert(`Your score is ${sum}`);
+    
+  
   }
 </script>
 
