@@ -7,40 +7,43 @@
 </head>
 <body>
     <div id = "start page">
-    <h1>Happy Carpets</h1>
-    <p style="font-family: comic sans ms; color: chartreuse;">Welcome to Happy Carpets! We offer a wide variety of carpets to suit every style and budget. Whether you're looking for a plush shag rug or a durable outdoor mat, we have something for everyone.</p>
-    <h2>Our Products</h2>
+    <h1 style="text-align: center; font-size:80px">  
+        How depressed are you rn?
+    </h1>
     <div class="quiz">
         <h2>
             <style>
                 .quiz
                 {
-                    display: flex;
-                    flex-direction: row;
-                    align-items:center;
-                    gap:10px;
+                    display: flex;           
+                    flex-direction: column;    
+                    align-items: center;      
+                     
+
+                    gap: 1px;
                 }
                 button
                 {
                     color: black;
-                    width: 600px;
-                    height: 300px;
-                    font-size: 50px;
+                    width: 500px;
+                    height: 200px;
+                    font-size: 65px;
                     border-radius: 40px;
+
+                    transition: all 0.2s ease; 
                 }
             </style>
-            How depressed are you rn?
         </h2>
         <div>
-            <button style = "background-color: pink;margin-left: 30px;"
+            <button style = "background-color: pink;"
             onclick="alert('You are very depressed!')">Very</button>
 
-            <button style = "background-color: lightblue;margin-left: 0px;" 
+            <button style = "background-color: lightblue;margin-top: 5px" 
             onclick="alert('You are somewhat depressed!')">Somewhat</button>
         </div>
         
         <div>
-            <button style = "background-color: rgb(241, 163, 220);margin-left:30px"
+            <button style = "background-color: rgb(241, 163, 220);"
             onclick="alert('You are somewhat depressed!')">idk</button >
 
             <button style = "background-color: rgb(132, 153, 246);margin-top: 5px"
@@ -48,13 +51,5 @@
         </div>
         
     </div>         
-    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJpyQq5LhLqJkM4iSdsvBt-WWe3WBZbRK6AA&s" ">
-        <button >
-            BUY NOW!!!
-        </button>
-    </a>
-    <!--
-    <img src = "smiling-cat-for-web.jpg" alt = "A smiling cat on a carpet">
--->
 </body>
 </html>
