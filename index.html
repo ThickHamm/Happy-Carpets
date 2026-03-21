@@ -36,14 +36,20 @@
     <div class="quiz">
         <h2>
             <style>
+                .quiz
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items:center;
+                    gap:10px;
+                }
                 button
                 {
                     color: black;
                     width: 600px;
                     height: 300px;
                     font-size: 50px;
-                    border-radius: 40 px;
-                    gap: 100px;
+                    border-radius: 40px;
                 }
             </style>
             How depressed are you rn?
@@ -51,13 +57,13 @@
         <button style = "background-color: pink;margin-left: 30px;"
         onclick="alert('You are very depressed!')">Very</button>
 
-        <button style = "background-color: lightblue;margin-left: 0px" 
+        <button style = "background-color: lightblue;margin-left: 0px;" 
         onclick="alert('You are somewhat depressed!')">Somewhat</button>
 
-        <button style = "background-color: rgb(241, 163, 220);margin: 30px;"
+        <button style = "background-color: rgb(241, 163, 220);margin-left:30px"
         onclick="alert('You are somewhat depressed!')">idk</button >
 
-        <button style = "background-color: rgb(132, 153, 246);"
+        <button style = "background-color: rgb(132, 153, 246);margin-top: 5px"
         onclick="alert('You are not depressed at all!')">Not at all</button>
     </div>         
     <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJpyQq5LhLqJkM4iSdsvBt-WWe3WBZbRK6AA&s" ">
