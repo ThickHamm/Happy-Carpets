@@ -9,19 +9,20 @@
     <h1>Happy Carpets</h1>
     <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: green;">Click the following button for a surprise!.</p>
     
-    <button type="button" onclick="score += 1; myFunction()">Click Me 1</button>
-    <button type="button" onclick="score += 2; myFunction()">Click Me 2</button>
-    <button type="button" onclick="score += 3; myFunction()">Click Me 3</button>
-    <button type="button" onclick="score += 4; myFunction()">Click Me 4</button>
+    <button type="button" onclick="score += 1; questions++; myFunction()">Click Me 1</button>
+    <button type="button" onclick="score += 2; questions++; myFunction()">Click Me 2</button>
+    <button type="button" onclick="score += 3; questions++; myFunction()">Click Me 3</button>
+    <button type="button" onclick="score += 4; questions++; myFunction()">Click Me 4</button>
 
 
     <script>
         let score = 0;
+        let questions = 0; // this is only needed for now, if we wind up making each question its own html file than the final one can just direct us to results without needing to count each question
         //alert('Site is loaded');
         function myFunction() 
         {
         alert('The button was clicked!');
-        window.location.href = `displayscore.html?score=${score}`
+        window.location.href = `displayscore.html?score=${score}&questions=${questions}`
         }
     </script>
 </body>
