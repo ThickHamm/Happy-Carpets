@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <audio autoplay loop src="Roblox Main Menu Theme Song  Xbox One.mp3"></audio>
+<audio id="bg-music" loop src="Roblox Main Menu Theme Song  Xbox One.mp3"></audio>
 <style>
     body, html {
     margin: 0;
@@ -296,7 +296,7 @@
     <button button id = "40" style="background-color:rgb(132, 153, 246);"type="button" onclick="; myFunction(id)">I feel very excited and confident</button>
   </div>
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="checkResults();">Finish</button>
+    onclick="checkResults(); stopMusic();">Finish</button>
   <button style = "background-color: rgb(91, 183, 95);"
     onclick="showPage('question9'); index--;">Back</button>
   <button style = "background-color: rgb(206, 97, 97);"
@@ -310,7 +310,7 @@
   <img src="happy kitty.jpg" alt=" results image" style="width: 300px; height: 300px;">
   <img src="970.jpeg" alt=" results image" style="width: 300px; height: 300px; left: 300px;">
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+    onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
 </div>
 
     <div id="depressedresults" class="page">
@@ -320,7 +320,7 @@
   <img src="0LsE6m.gif" alt=" results image" style="width: 300px; height: 300px;">
   <img src="IMG_1613.jpg" alt=" results image" style="width: 300px; height: 300px; left: 300px;">
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+    onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
 </div>
 
 <div style = "background-image: url('82901761007-getty-images-1886286537.jpg');" id = "lowkeysad" class="page">
@@ -329,7 +329,7 @@
   <h2 style="color: grey;" > YOU ARE LOWKEY SAD </h2>
   <img src="cartoon-illustration-of-sad-or-depressed-funny-guy-character-DWWMBW-removebg-preview.png" alt=" results image" style="width: 500px; height: 700px;">
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+    onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
 </div>
 
 <script>
@@ -371,11 +371,18 @@ if (index == 2){
   document.getElementById(`${id}`).style.backgroundColor = "green";
   //alert(`Your score is ${(answers[index]-1)%4+1}`);
   }
+  
+  function playMusic() {
+  var audio = document.getElementById("bg-music");
+  audio.play();
+}
 
-   function playMusic() {
-    var audio = new Audio('Roblox Main Menu Theme Song  Xbox One.mp3');
-    audio.play();
-  }
+function stopMusic() {
+  var audio = document.getElementById("bg-music");
+  audio.pause();           // Pauses the music
+  audio.currentTime = 0;   // Rewinds it to the beginning (acts like a "stop")
+}
+
     function checkResults()
   {
     
