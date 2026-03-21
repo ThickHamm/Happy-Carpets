@@ -3,14 +3,14 @@
 <head>
 <style>
   .page {
-  display: none;  /* hide all pages by default */
+  display: none;  
   }
 
 .page.active {
-  display: flex;             /* show page as flex */
-  flex-direction: column;    /* stack content */
-  align-items: center;       /* center horizontally */
-  justify-content: center;   /* center vertically */
+  display: flex;           
+  flex-direction: column;    
+  align-items: center;      
+  justify-content: center;  
   height: 100vh;
   gap: 20px;
   }
@@ -20,13 +20,13 @@
       padding: 20px;
       font-size: 24px;
       border: none;
-      border-radius: 25px;       /* rounded corners */
+      border-radius: 25px;     
       cursor: pointer;
 
       color: white;
       font-weight: bold;
 
-      transition: all 0.2s ease; /* smooth hover effect */
+      transition: all 0.2s ease; 
   }
   
   h1 {
@@ -120,8 +120,62 @@
   <h1>Question 5</h1>
   <p>(Question 5 content)</p>
   <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('question6')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
     onclick="showPage('home')">Back Home</button>
 </div>
+
+<!-- Page 9 -->
+<div id="question 6" class="page">
+  <h1>Question 6</h1>
+  <p>(Question 6 content)</p>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('question7')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
+</div>
+
+<!-- Page 10 -->
+<div id="question7" class="page">
+  <h1>Question 7</h1>
+  <p>(Question 7 content)</p>
+  <button style = "background-color: rgb(73, 180, 185);
+    onclick="showPage('question8')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
+</div>
+
+<!-- Page 11 -->
+<div id="question8" class="page">
+  <h1>Question 8</h1>
+  <p>(Question 8 content)</p>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('question9')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
+</div>
+
+<!-- Page 12 -->
+<div id="question9" class="page">
+  <h1>Question 9</h1>
+  <p>(Question 9 content)</p>
+  <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('question10')">Next</button>
+  <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('home')">Back Home</button>
+</div>
+
+<!-- Page 13 -->
+<div id="question10" class="page">
+  <h1>Question 10</h1>
+  <p>(Question 10 content)</p>
+  <button style = "background-color: rgb(206, 97, 97);
+    onclick="showpage('home')">Back Home</button>
+</div>
+
+
+  
+
 
 </body>
 </html>
