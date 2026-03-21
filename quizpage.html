@@ -227,11 +227,11 @@
   let answers = ["1"];
   function myFunction(id) 
   {
-  if(answers[0]%4==0)
+  if(answers[0]%4==1)
   { document.getElementById(`${answers[0]}`).style.backgroundColor = "pink";}
-  else if(answers[0]%4==1)
-  { document.getElementById(`${answers[0]}`).style.backgroundColor = "lightblue";}
   else if(answers[0]%4==2)
+  { document.getElementById(`${answers[0]}`).style.backgroundColor = "lightblue";}
+  else if(answers[0]%4==3)
   { document.getElementById(`${answers[0]}`).style.backgroundColor = "rgb(215, 136, 194)";}
   else
   { document.getElementById(`${answers[0]}`).style.backgroundColor = "rgb(132, 153, 246)";}
