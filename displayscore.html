@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Carpets</title>
+</head>
+<body>
+    <h1>Happy Carpets</h1>
+    <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: green;">Click the following button to see your score!.</p>
+    
+    <button type="button" onclick="score++; myFunction()">Click Me 1</button>
+    <button type="button" onclick="score = Number(score) + 2; myFunction()">Click Me 2</button>
+    <button type="button" onclick="score = Number(score) + 3; myFunction()">Click Me 3</button>
+    <button type="button" onclick="score = Number(score) + 4; myFunction()">Click Me 4</button>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let score = Number(params.get('score') ?? 0);
+        alert(`Success! Your score is ${score}`);
+        function myFunction() 
+        {
+        window.location.href = `displayscore.html?score=${score}`
+        //console.log(`The button was clicked! Your score is ${score}`)
+        }
+    </script>
+</body>
+</html>
+
+
+
