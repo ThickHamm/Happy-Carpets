@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Carpets</title>
+</head>
+<body>
+    <h1>Happy Carpets</h1>
+    <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: green;">Click the following button for a surprise!.</p>
+    
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let score = Number(params.get('score') ?? 21);
+        alert(`Success! Your score is ${score}`);
+
+        if (score >= 0 && score <= 10) {
+           const win = window.open("", "Image", "width= 700,height=400");
+           win.document.write("<img src='https://images.ctfassets.net/2djrn56blv6r/7rAzwZd1uxcIsKO7ZfJqVL/686320c46e6ff8d63191f3a8eb33de1f/sad-cat-header.jpg?fm=webp&q=75&w=1920' style='width:100%'>");
+        }
+        else if (score >= 11 && score <= 20){
+            const win = window.open("", "Image", "width= 700,height=450");
+           win.document.write("<img src='https://www.operationkindness.org/wp-content/uploads/blog-kitten-nursery-operation-kindness.jpg' style='width:100%'> <p style='text-align: center; font-size: 20px;'>You are somewhat depressed! Here is a cute kitten to cheer you up!</p>");
+        }
+        else if(score >= 21 && score <= 30){
+            // Example: Opening multiple windows with unique names
+        window.open('happy kitty.jpg', 'window1', 'width=400,height=400');
+        window.open('smiling-cat-for-web.jpg', 'window1', 'width=400,height=400');
+        }
+        else {
+            const win = window.open("", "Image", "width= 700,height=500");
+           win.document.write("<img src='https://www.ccvhankeny.com/site/blog/2022/05/30/guide-to-kitten-care' style='width:100%'>");
+        }
+       
+    </script>
+</body>
+</html>
