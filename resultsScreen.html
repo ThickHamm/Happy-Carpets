@@ -12,23 +12,23 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        let score = Number(params.get('score') ?? 0);
+        let score = Number(params.get('score') ?? 21);
         alert(`Success! Your score is ${score}`);
 
         if (score >= 0 && score <= 10) {
-           const win = window.open("", "Image", "width= 300,height=300");
+           const win = window.open("", "Image", "width= 700,height=400");
            win.document.write("<img src='https://images.ctfassets.net/2djrn56blv6r/7rAzwZd1uxcIsKO7ZfJqVL/686320c46e6ff8d63191f3a8eb33de1f/sad-cat-header.jpg?fm=webp&q=75&w=1920' style='width:100%'>");
         }
         else if (score >= 11 && score <= 20){
-            const win = window.open("", "Image", "width= 300,height=300");
+            const win = window.open("", "Image", "width= 700,height=450");
            win.document.write("<img src='https://www.operationkindness.org/wp-content/uploads/blog-kitten-nursery-operation-kindness.jpg' style='width:100%'>");
         }
         else if(score >= 21 && score <= 30){
-            const win = window.open("", "Image", "width= 300,height=300");
+            const win = window.open("", "Image", "width= 700,height=550");
            win.document.write("<img src='https://images.ctfassets.net/sfnkq8lmu5d7/1NaIFGyBn0qwXYlNaCJSEl/ad59ce5eefa3c2322b696778185cc749/2021_0825_Kitten_Health.jpg' style='width:100%'>");
         }
         else {
-            const win = window.open("", "Image", "width= 300,height=300");
+            const win = window.open("", "Image", "width= 700,height=500");
            win.document.write("<img src='https://www.ccvhankeny.com/site/blog/2022/05/30/guide-to-kitten-care' style='width:100%'>");
         }
        
