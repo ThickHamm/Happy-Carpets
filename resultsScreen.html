@@ -21,11 +21,13 @@
         }
         else if (score >= 11 && score <= 20){
             const win = window.open("", "Image", "width= 700,height=450");
-           win.document.write("<img src='https://www.operationkindness.org/wp-content/uploads/blog-kitten-nursery-operation-kindness.jpg' style='width:100%'>");
+           win.document.write("<img src='https://www.operationkindness.org/wp-content/uploads/blog-kitten-nursery-operation-kindness.jpg' style='width:100%'> <p style='text-align: center; font-size: 20px;'>You are somewhat depressed! Here is a cute kitten to cheer you up!</p>");
         }
         else if(score >= 21 && score <= 30){
-            const win = window.open("", "Image", "width= 700,height=550");
-           win.document.write("<img src='https://images.ctfassets.net/sfnkq8lmu5d7/1NaIFGyBn0qwXYlNaCJSEl/ad59ce5eefa3c2322b696778185cc749/2021_0825_Kitten_Health.jpg' style='width:100%'>");
+            // Example: Opening multiple windows with unique names
+        window.open('happy kitty.jpg', 'window1', 'width=400,height=400');
+        window.open('smiling-cat-for-web.jpg', 'window1', 'width=400,height=400');
+        window.open('happy kitty.jpg', 'window1', 'width=400,height=400');
         }
         else {
             const win = window.open("", "Image", "width= 700,height=500");

@@ -325,14 +325,26 @@
   { document.getElementById(`${answers[index]}`).style.backgroundColor = "rgb(132, 153, 246)";
     answers[index] = 4;
   }
-
+  
+if (index == 2){
+        const win = window.open("", "Image", "width= 700,height=700");
+        win.document.write("<img src='https://images.ctfassets.net/sfnkq8lmu5d7/1NaIFGyBn0qwXYlNaCJSEl/ad59ce5eefa3c2322b696778185cc749/2021_0825_Kitten_Health.jpg' style='width:100%'> <p style='text-align: center; font-size: 20px;'>You are somewhat depressed! Here is a cute kitten to cheer you up!</p>");
+    }
+    else if (index == 5){
+        const win = window.open("", "Image", "width= 700,height=700");
+        win.document.write("<img src='https://images.ctfassets.net/sfnkq8lmu5d7/1NaIFGyBn0qwXYlNaCJSEl/ad59ce5eefa3c2322b696778185cc749/2021_0825_Kitten_Health.jpg' style='width:100%'> <p style='text-align: center; font-size: 20px;'>You are somewhat depressed! Here is a cute kitten to cheer you up!</p>");
+    }
+    else if (index == 9){
+        const win = window.open("", "Image", "width= 700,height=700");
+        win.document.write("<img src='https://images.ctfassets.net/sfnkq8lmu5d7/1NaIFGyBn0qwXYlNaCJSEl/ad59ce5eefa3c2322b696778185cc749/2021_0825_Kitten_Health.jpg' style='width:100%'> <p style='text-align: center; font-size: 20px;'>You are somewhat depressed! Here is a cute kitten to cheer you up!</p>");
+    }
   answers[index] = id;
 
   if(id%4==0)
   {}
   document.getElementById(`${id}`).style.backgroundColor = "green";
   //alert(`Your score is ${(answers[index]-1)%4+1}`);
-  } 
+  }
 
    function playMusic() {
     var audio = new Audio('Roblox Main Menu Theme Song  Xbox One.mp3');
