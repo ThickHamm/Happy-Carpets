@@ -26,7 +26,9 @@
 
 <script>
   function showPage(pageId) {
+    // 1. Find all elements with the class 'page' and hide them
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    // 2. Show the specific page by adding the 'active' class
     document.getElementById(pageId).classList.add('active');
   }
 </script>
