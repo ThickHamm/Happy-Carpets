@@ -9,11 +9,13 @@
 </style>
 </head>
 <body>
-
   <!-- Page 1 -->
   <div id="home" class="page active">
     <h1>Welcome Home</h1>
-    <button onclick="showPage('about')">Go to About</button>
+    <button style = "background-color: rgb(206, 97, 97);"
+    onclick="showPage('about')">Go to About</button>
+    <button style = "background-color: rgb(73, 180, 185);"
+    onclick="showPage('quizstart')">Go to Quiz</button>
   </div>
 
   <!-- Page 2 -->
@@ -32,6 +34,42 @@
     document.getElementById(pageId).classList.add('active');
   }
 </script>
+<!-- Page 3 -->
+<div id="quizstart" class="page">
+  <h1>Welcome to the Quiz!</h1>
+  <p>(Quiz info)</p>
+  <p>Click the button below to start the quiz:</p>
+  <button onclick="showPage('question1')">Start Quiz!</button>
+  <button onclick="showPage('home')">Back Home</button>
+</div>
+
+<!-- Page 4 -->
+<div id="question1" class="page">
+  <h1>Question 1</h1>
+  <p>(Question 1 content)</p>
+  <button onclick ="showPage('question2')">Next</button>
+  <button onclick="showPage('home')">Back Home</button>
+</div>
+
+<!-- Page 5 -->
+<div id="question2" class="page">
+  <h1>Question 2</h1>
+  <p>(Question 2 content)</p>
+  <button onclick="showPage('question3')">Next</button>
+  <button onclick="showPage('home')">Back Home</button>
+ 
+</div>
+
+<!-- Page 6 -->
+<div id="question3" class="page">
+  <h1>Question 3</h1>
+  <p>(Question 3 content)</p>
+  <button onclick="showPage('question4')">Next</button>
+  <button onclick="showPage('home')">Back Home</button>
+</div>
+
+<!-- Page 7 -->
 
 </body>
 </html>
+
