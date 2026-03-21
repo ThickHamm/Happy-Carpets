@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <audio autoplay loop src="Roblox Main Menu Theme Song  Xbox One.mp3"></audio>
 <style>
-
     body, html {
     margin: 0;
     padding: 0;
@@ -71,7 +71,7 @@
     <button style = "background-color: rgb(206, 97, 97);"
       onclick="showPage('about')">Go to About</button>
     <button style = "background-color: rgb(73, 180, 185);"
-      onclick="showPage('quizinfo')">Go to Quiz</button>
+      onclick="showPage('quizinfo'); playMusic();">Go to Quiz</button>
   </div>
 
   <!-- Page 2 -->
@@ -334,6 +334,11 @@
   document.getElementById(`${id}`).style.backgroundColor = "green";
   alert(`Your score is ${(answers[index]-1)%4+1}`);
   } 
+
+   function playMusic() {
+    var audio = new Audio('Roblox Main Menu Theme Song  Xbox One.mp3');
+    audio.play();
+  }
 </script>
 
 </body>
