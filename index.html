@@ -4,29 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Carpets</title>
-    <style>
-        body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        } 
-         .parallax-container {
-    /* Set to 100% of the Viewport Height */
-    height: 100vh; 
-    width: 100%;
-    background-image: url('smiling-cat-for-web.jpg');
-    background-attachment: fixed; /* Keeps image from moving */
-    background-position: center;  /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-size: cover;       /* Forces image to fill the area */
-    }
-    .content {
-    height: 1000px; /* Extra height to allow scrolling */
-    background-color: white;
-    padding: 50px;
-    font-size: 24px;
-    }
-    </style>
 </head>
 <body>
     <div id = "start page">
@@ -39,7 +16,7 @@
                 .quiz
                 {
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     align-items:center;
                     gap:10px;
                 }
@@ -54,17 +31,22 @@
             </style>
             How depressed are you rn?
         </h2>
-        <button style = "background-color: pink;margin-left: 30px;"
-        onclick="alert('You are very depressed!')">Very</button>
+        <div>
+            <button style = "background-color: pink;margin-left: 30px;"
+            onclick="alert('You are very depressed!')">Very</button>
 
-        <button style = "background-color: lightblue;margin-left: 0px;" 
-        onclick="alert('You are somewhat depressed!')">Somewhat</button>
+            <button style = "background-color: lightblue;margin-left: 0px;" 
+            onclick="alert('You are somewhat depressed!')">Somewhat</button>
+        </div>
+        
+        <div>
+            <button style = "background-color: rgb(241, 163, 220);margin-left:30px"
+            onclick="alert('You are somewhat depressed!')">idk</button >
 
-        <button style = "background-color: rgb(241, 163, 220);margin-left:30px"
-        onclick="alert('You are somewhat depressed!')">idk</button >
-
-        <button style = "background-color: rgb(132, 153, 246);margin-top: 5px"
-        onclick="alert('You are not depressed at all!')">Not at all</button>
+            <button style = "background-color: rgb(132, 153, 246);margin-top: 5px"
+            onclick="alert('You are not depressed at all!')">Not at all</button>
+        </div>
+        
     </div>         
     <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJpyQq5LhLqJkM4iSdsvBt-WWe3WBZbRK6AA&s" ">
         <button >
