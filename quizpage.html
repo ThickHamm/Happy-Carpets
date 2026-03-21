@@ -385,6 +385,8 @@ if (index == 2){
       sum += (answers[i]-1)%4 + 1;
     }
     alert(`Your score is ${sum}`);
+
+    document.querySelectorAll('#sum').forEach(el => el.textContent = sum);
     
     if(sum<=15)
     {
