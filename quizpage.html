@@ -41,6 +41,8 @@
       border-radius: 25px;     
       cursor: pointer;
 
+      background-color: darkgrey;
+
       color: white;
       font-weight: bold;
 
@@ -96,13 +98,13 @@
 <div id="question1" class="page">
   <h1>Question 1</h1>
   <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
-    <button type="button" onclick="score += 1; myFunction();">Click Me 1</button>
-    <button type="button" onclick="score += 2; myFunction()">Click Me 2</button>
+    <button id = "button1" type="button" onclick="score += 1; myFunction(id);">Click Me 1</button>
+    <button id = "button2" type="button" onclick="score += 2; myFunction(id)">Click Me 2</button>
   </div>
     
   <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
-    <button type="button" onclick="score += 3; myFunction()">Click Me 3</button>
-    <button type="button" onclick="score += 4; myFunction()">Click Me 4</button>
+    <button id = "button3" type="button" onclick="score += 3; myFunction(id)">Click Me 3</button>
+    <button id = "button4" type="button" onclick="score += 4; myFunction(id)">Click Me 4</button>
   </div>
   <button style = "background-color: rgb(73, 180, 185);"
     onclick ="showPage('question2')">Next</button>
@@ -221,10 +223,14 @@
 
 <script>
   let score = 0;
-  function myFunction() 
+  let answers = ["button1"];
+  function myFunction(id) 
   {
-  alert('The button was clicked!');
-  }
+  document.getElementById(`${answers[0]}`).style.backgroundColor = "darkgrey";
+  answers[0] = id;
+  document.getElementById(`${id}`).style.backgroundColor = "green";
+  //alert('The button was clicked!');
+  } 
 </script>
 
 </body>
