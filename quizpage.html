@@ -61,7 +61,7 @@
   function showPage(pageId) {
     // 1. Find all elements with the class 'page' and hide them
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    // 2. Show the specific page by adding the 'active' class
+    // 2. Show the specific page by adding the 'active' class to it
     document.getElementById(pageId).classList.add('active');
   }
 </script>
@@ -380,7 +380,6 @@ if (index == 2){
   if(id%4==0)
   {}
   document.getElementById(`${id}`).style.backgroundColor = "green";
-  //alert(`Your score is ${(answers[index]-1)%4+1}`);
   }
   
   function playMusic() {
@@ -390,8 +389,8 @@ if (index == 2){
 
 function stopMusic() {
   var audio = document.getElementById("bg-music");
-  audio.pause();           // Pauses the music
-  audio.currentTime = 0;   // Rewinds it to the beginning (acts like a "stop")
+  audio.pause();
+  audio.currentTime = 0;
 }
 
     function checkResults()
