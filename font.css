@@ -1,38 +1,16 @@
 
-.q1-text{
-    font-size: 50px;
-    font-weight: bold;
-    opacity: 0.8;
-    letter-spacing: 1px;
-}
-.q2-text{
-    font-size: 50px;
-    font-weight: bold;
+.q1-text, .q2-text, .q3-text, .q4-text, .q5-text, .q6-text, .q7-text, .q8-text, .q9-text, .q10-text
+{
+    font-size: 35px;
+    font-weight: 600px;
+    font-family: 'poppins italic', serif;
+    background-color: rgba(240, 246, 246, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15x);
 
-}
-.q3-text{
-    font-weight: bold;
-    font-size: 50px;
-}
-.q4-text{
-    font-weight: bold;
-}
-.q5-text{
-    font-weight: bold;
-}
-
-.q6-text{
-    font-weight: bold;
-}
-.q7-text{
-    font-weight: bold;
-}
-.q8-text{
-    font-weight: bold;
-}
-.q9-text{
-    font-weight: bold;
-}
-.q10-text{
-    font-weight: bold;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px 35px;
+    display: inline-block
+    
 }
