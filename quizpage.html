@@ -22,7 +22,7 @@
   gap: 20px;
   height: 1000px;
     background-color: transparent;
-    padding: 50px;
+    padding: 0px;
     font-size: 24px;
     height: 100vh; 
     width: 100%;
@@ -35,6 +35,7 @@
  
   button {
       width: 350px;
+      height: 150px;
       padding: 20px;
       font-size: 24px;
       border: none;
@@ -50,6 +51,8 @@
   }
   
   h1 {
+    border-top: 0px;
+    border-bottom: 0px;
     text-align: center;
     font-family: 'Georgia', serif;
   }
@@ -68,9 +71,9 @@
   <!-- Page 1 -->
   <div id="home" class="page active">
     <h1>Welcome Home</h1>
-    <button style = "background-color: rgb(206, 97, 97);"
+    <button style = "background-color: rgb(206, 97, 97); height: 70px;"
       onclick="showPage('about')">Go to About</button>
-    <button style = "background-color: rgb(73, 180, 185);"
+    <button style = "background-color: rgb(73, 180, 185); height: 70px;"
       onclick="showPage('quizinfo'); playMusic();">Go to Quiz</button>
   </div>
 
@@ -79,26 +82,25 @@
     <h1>About Us</h1>
     <p>This content is in the same file!</p>
     <img src="smiling-cat-for-web.jpg" alt="">
-    <button style = "background-color: rgb(73, 180, 185);"
+    <button style = "background-color: rgb(73, 180, 185); height: 70px;"
       onclick="showPage('home')">Back Home</button>
   </div>
 
 <!-- Page 3 -->
 <div id="quizinfo" class="page">
   <h1>Welcome to the Quiz!</h1>
-  <p>(Quiz info)</p>
   <p>Click the button below to start the quiz:</p>
-  <button style = "background-color: rgb(71, 175, 83);"
+  <button style = "background-color: rgb(71, 175, 83); height: 70px;"
     onclick="showPage('question1')">Start Quiz!</button>
-  <button style = "background-color: rgb(206, 97, 97);"
+  <button style = "background-color: rgb(206, 97, 97); height: 70px;"
     onclick="showPage('home')">Back Home</button>
 </div>
 
 <!-- Page 4 -->
 <div id="question1" class="page">
   <h1>Question 1</h1>
-  <p style="font-size: 70px">If your week were a weather forecast what would it be?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">If your week were a weather forecast what would it be?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "1" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">Stormy</button>
     <button button id = "2" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Rainy</button>
   </div>
@@ -107,19 +109,21 @@
     <button button id = "3" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Partly Cloudy</button>
     <button button id = "4" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Sunny</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick ="showPage('question2'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('quizinfo'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('quizinfo'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question2'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 5 -->
 <div id="question2" class="page">
   <h1>Question 2</h1>
-  <p style="font-size: 70px">What part of the day do you you enjoy the most?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">What part of the day do you you enjoy the most?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "5" style="background-color:rgb(219, 153, 211);" type="button" onclick=" myFunction(id)">I don't really enjoy any part of my day</button>
     <button button id = "6" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Only small monments of my day</button>
   </div>
@@ -127,19 +131,21 @@
     <button button id = "7" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Some parts of my day make me happy</button>
     <button button id = "8" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Most of my day feels joyful</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);" 
-    onclick="showPage('question3'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"  
-    onclick="showPage('question1'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+   <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question1'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question3'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 6 -->
 <div id="question3" class="page">
   <h1>Question 3</h1>
-  <p style="font-size: 70px">How often do you feel stressed and overwhelmed?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">How often do you feel stressed and overwhelmed?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "9" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">I feel like something is always going wrong</button>
     <button button id = "10" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Often I feel stressed more than I would like</button>
   </div>
@@ -148,19 +154,21 @@
     <button button id = "11" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Sometimes I can usually manage it</button>
     <button button id = "12" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Rarely I usually feel calm and in a good headspace</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick="showPage('question4'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('question2'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question2'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question4'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 7 -->
 <div id="question4" class="page">
   <h1>Question 4</h1>
-  <p style="font-size: 70px">Do you feel motivated to have fun?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">Do you feel motivated to have fun?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "13" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">No I tend too stay to myself</button>
     <button button id = "14" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Rarely I don't feel motivated</button>
   </div>
@@ -169,19 +177,21 @@
     <button button id = "15" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Sometimes I get that feeling occasionally</button>
     <button button id = "16" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Yes I often feel motivated to have fun</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick="showPage('question5'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('question3'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question3'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question5'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 8 -->
 <div id="question5" class="page">
   <h1>Question 5</h1>
-  <p style="font-size: 70px">Are you easily annoyed with social interaction?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">Are you easily annoyed with social interaction?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "17" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">Yes I prefer to avoid being around people</button>
     <button button id = "18" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I can tolerate people but I don't like being around them </button>
   </div>
@@ -190,19 +200,21 @@
     <button button id = "19" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I enjoy being around people but I need my own space </button>
     <button button id = "20" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">No I enjoy having people around me</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick="showPage('question6'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('question4'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question4'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question6'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 9 -->
 <div id="question6" class="page">
   <h1>Question 6</h1>
-  <p style="font-size: 70px">How supported do you feel by the people around you?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">How supported do you feel by the people around you?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "21" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">I mainily feel alone</button>
     <button button id = "22" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I sometimes feel supported</button>
   </div>
@@ -211,19 +223,21 @@
     <button button id = "23" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I often feel supported</button>
     <button button id = "24" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I feel very supported</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick="showPage('question7'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('question5'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question5'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question7'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 10 -->
 <div id="question7" class="page">
   <h1>Question 7</h1>
-  <p style="font-size: 70px">Do you feel more like yourself lately or less like yourself?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">Do you feel more like yourself lately or less like yourself?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "25" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">I don't feel like myself at all</button>
     <button button id = "26" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I feel a little off</button>
   </div>
@@ -232,19 +246,21 @@
     <button button id = "27" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I mostly feel like myself</button>
     <button button id = "28" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I feel completely like myself</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick="showPage('question8'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('question6'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question6'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question8'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 11 -->
 <div id="question8" class="page">
   <h1>Question 8</h1>
-  <p style="font-size: 70px">Do you feel like every problem is your fault?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">Do you feel like every problem is your fault?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "29" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">Yes I blame myself every time</button>
     <button button id = "30" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Sometimes I feel like its mostly my fault</button>
   </div>
@@ -253,19 +269,21 @@
     <button button id = "31" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Sometimes but not always</button>
     <button button id = "32" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">No it's mostly out of my control</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick="showPage('question9'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('question7'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question7'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question9'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 12 -->
 <div id="question9" class="page">
   <h1>Question 9</h1>
-  <p style="font-size: 70px">Do you feel like your life has purpose?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">Do you feel like your life has purpose?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "33" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">No I feel like I am just here</button>
     <button button id = "34" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Sometimes I feel like I have a purpose</button>
   </div>
@@ -274,19 +292,21 @@
     <button button id = "35" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Yes I am starting to find my purpose</button>
     <button button id = "36" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">Yes I feel confident in my purpose</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick="showPage('question10'); index++;">Next</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('question8'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question8'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick ="showPage('question10'); index++;">Next</button>
+  </div>
 </div>
 
 <!-- Page 13 -->
 <div id="question10" class="page">
   <h1>Question 10</h1>
-  <p style="font-size: 70px">How do you feel about your future?</p>
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <p style="font-size: 60px; margin-top: 0px;">How do you feel about your future?</p>
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 0px;">
     <button button id = "37" style="background-color:rgb(219, 153, 211);" type="button" onclick="; myFunction(id);">I feel very hopeless about my future</button>
     <button button id = "38" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I feel worried and uncertain</button>
   </div>
@@ -295,20 +315,24 @@
     <button button id = "39" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I feel somewhat hopeful</button>
     <button button id = "40" style="background-color:rgb(219, 153, 211);"type="button" onclick="; myFunction(id)">I feel very excited and confident</button>
   </div>
-  <button style = "background-color: rgb(91, 183, 95);"
-    onclick="checkResults(); stopMusic();">Finish</button>
-  <button style = "background-color: rgb(206, 97, 97);"
-    onclick="showPage('question9'); index--;">Back</button>
-  <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0;">Back Home</button>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <button style = " height: 100px; width: 200px; background-color: rgb(206, 97, 97);"
+      onclick="showPage('question9'); index--;">Back</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
+      onclick="showPage('home'); index = 0;">Back Home</button>
+    <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
+      onclick="checkResults(); stopMusic();">Finish</button>
+  </div>
 </div>
 
 <div id = "geekedresults" class="page">
   <h1 style="background-color: gray; color: black; border-radius: 15px; padding: 10px 20px;">Your Results</h1>
   <h2 style="color: black; background-color: gray; border-radius: 15px; padding: 10px 20px;" >Your score is: <span id="sum"></span> </h2>
-  <h2 style="color: black; background-color: gray; border-radius: 15px; padding: 10px 20px;" > YOU HELLA GEEKED TWIN!!!</h2>
-  <img src="happy kitty.jpg" alt=" results image" style="width: 300px; height: 300px;">
-  <img src="970.jpeg" alt=" results image" style="width: 300px; height: 300px; left: 300px;">
+  <h2 style="color: black; background-color: gray; border-radius: 15px; padding: 10px 20px;" > YOU HELLA GEEKED TWIN</h2>
+  <div style="display: flex; justify-content: center; gap: 50px; margin-top: 30px;">
+    <img src="happy kitty.jpg" alt=" results image" style="width: 300px; height: 300px;">
+    <img src="970.jpeg" alt=" results image" style="width: 300px; height: 300px; left: 300px;">
+  </div>
   <button style = "background-color: rgb(73, 180, 185);"
     onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
 </div>
@@ -401,7 +425,7 @@ function stopMusic() {
     {
       sum += (answers[i]-1)%4 + 1;
     }
-    alert(`Your score is ${sum}`);
+    //alert(`Your score is ${sum}`);
 
     document.querySelectorAll('#sum').forEach(el => el.textContent = sum);
     
