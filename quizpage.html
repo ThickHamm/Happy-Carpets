@@ -2,6 +2,10 @@
 <html>
 <head>
 <audio id="bg-music" loop src="songs/Roblox Main Menu Theme Song  Xbox One.mp3"></audio>
+<audio id = "DEPRESSED" loop src="songs\v12044gd0000d2f8o4nog65o7qrvvimg 2.mp3"></audio>
+<audio id = "LOWKEYSAD" loop src="songs\v12044gd0000d41arevog65ph32gj6u0.mp3"></audio>
+<audio id = "CHILLAF" loop src="songs\v15044gf0000d699p8nog65mb5l8od60.mp3"></audio>
+<audio id = "HAPPYRESULTS" loop src="songs\v15044gf0000d2g750nog65j2bgeuivg.mp3"></audio>
 <link rel="stylesheet" href="font.css">
 
 <style>
@@ -81,7 +85,7 @@
     <button style = "background-color: rgb(206, 97, 97); height: 70px;"
       onclick="showPage('about')">Go to About</button>
     <button style = "background-color: rgb(73, 180, 185); height: 70px;"
-      onclick="showPage('quizinfo'); playMusic();">Go to Quiz</button>
+      onclick="showPage('quizinfo'); playRobloxMusic();">Go to Quiz</button>
   </div>
 
   <!-- Page 2 -->
@@ -328,7 +332,7 @@
     <button style = " height: 100px; width: 200px; background-color: rgb(73, 180, 185);"
       onclick="showPage('home'); index = 0;">Back Home</button>
     <button style = " height: 100px; width: 200px; background-color: rgb(91, 183, 95);"
-      onclick="checkResults(); stopMusic();">Finish</button>
+      onclick="checkResults(); stopRobloxMusic();">Finish</button>
   </div>
 </div>
 
@@ -341,7 +345,7 @@
     <img src="images/970.jpeg" alt=" results image" style="width: 300px; height: 300px; left: 300px;">
   </div>
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
+    onclick="showPage('home'); index = 0; stopRobloxMusic();">Back Home</button>
 </div>
 
     <div style = "background-image: url('images/images.jpg');" id = "depressedresults" class="page">
@@ -353,7 +357,7 @@
     <img src="images/IMG_1613.jpg" alt=" results image" style="width: 500px; height: 300px; left: 300px;">
   </div>    
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
+    onclick="showPage('home'); index = 0; stopDepressedMusic();">Back Home</button>
 </div>
 
 <div style = "background-image: url('images/82901761007-getty-images-1886286537.jpg');" id = "lowkeysad" class="page">
@@ -362,7 +366,7 @@
   <h2 style="color: black; background-color: gray; border-radius: 15px; padding: 10px 20px;" > YOU ARE LOWKEY SAD!!! </h2>
   <img src="images/cartoon-illustration-of-sad-or-depressed-funny-guy-character-DWWMBW-removebg-preview.png" alt=" results image" style="width: 350px; height: 490px;">
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
+    onclick="showPage('home'); index = 0; stopLowkeySadMusic();">Back Home</button>
 </div>
 
 <div style = "background-image: url('images/19313b84717574f1b953c29584cfefc5.jpg');" id = "chillaf" class="page">
@@ -371,7 +375,7 @@
   <h2 style="color: black; background-color: gray; border-radius: 15px; padding: 10px 20px;" > JUST A CHILL GUY. </h2>
   <img src="images/chillguy-1-gID_7-removebg-preview.png" alt=" results image" style="width: 1000px; height: 1400px;">
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
+    onclick="showPage('home'); index = 0; stopChillafMusic();">Back Home</button>
 </div>
 
 <div style = "background-image: url('images/0c63cb15-4ae6-44e6-8742-a924d7d5d6f2.jpg');" id = "happyresults" class="page">
@@ -380,7 +384,7 @@
   <h2 style="color: black; background-color: gray; border-radius: 15px; padding: 10px 20px;" > YOU ARE A HAPPY FELLOW!!! </h2>
   <img src="images/eade1feca67faed06570cf5495621746.jpg" alt=" results image" style="width: 500px; height: 700px;">
   <button style = "background-color: rgb(73, 180, 185);"
-    onclick="showPage('home'); index = 0; stopMusic();">Back Home</button>
+    onclick="showPage('home'); index = 0; stopHappyResultsMusic();">Back Home</button>
 </div>
 
 <script>
@@ -415,15 +419,59 @@ if (index == 2){
   document.getElementById(`${id}`).style.backgroundColor = "green";
   }
   
-  function playMusic() {
+  function playRobloxMusic() {
   var audio = document.getElementById("bg-music");
   audio.play();
 }
 
-function stopMusic() {
+function stopRobloxMusic() {
   var audio = document.getElementById("bg-music");
   audio.pause();
   audio.currentTime = 0;
+}
+
+  function playDepressedMusic() {
+  var audio = document.getElementById("DEPRESSED");
+  audio.play();
+}
+
+function stopDepressedMusic() {
+  var audio = document.getElementById("DEPRESSED");
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+function playLowkeySadMusic() {
+  var audio = document.getElementById("LOWKEYSAD");
+    audio.play();
+}
+
+function stopLowkeySadMusic() {
+  var audio = document.getElementById("LOWKEYSAD");
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+function playChillafMusic() {
+  var audio = document.getElementById("CHILLAF");
+    audio.play();
+}
+
+function stopChillafMusic() {
+  var audio = document.getElementById("CHILLAF");
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+function playHappyResultsMusic() {
+    var audio = document.getElementById("HAPPYRESULTS");
+    audio.play();
+}
+
+function stopHappyResultsMusic() {
+    var audio = document.getElementById("HAPPYRESULTS");
+    audio.pause();
+    audio.currentTime = 0;
 }
 
     function checkResults()
@@ -440,18 +488,22 @@ function stopMusic() {
     
     if(sum<=15)
     {
+        playDepressedMusic();
         showPage("depressedresults");
     }
     else if (sum<=21)
     {
+        playLowkeySadMusic();
         showPage("lowkeysad");
     }
     else if (sum<=28)
     {
+        playChillafMusic();
         showPage("chillaf");
     }
     else if (sum<=34)
     {
+        playHappyResultsMusic();
       showPage("happyresults");
     }
     else
